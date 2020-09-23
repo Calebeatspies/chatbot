@@ -1,0 +1,19 @@
+from random import choice
+
+def get_bot_response(user_response):
+    fast_food_chains = ["Subway", "Starbucks", "McDonalds", "Dunkin", "Pizza Hut", "Burger King", "Wendys", "Taco Bell", "Dominos", "Dairy Queen", "Little Caesars", "Sonic Drive In", "Papa Johns", "Arbys",
+                        "Jimmy Johns", "Baskin Robbins", "Chipotle", "Jack in the Box", "Panda Express", "Panera Bread", "Hardees", "Jersey Mikes", "Papa Murphys", "Five Guys", "Auntie Annes", "Carls Jr.", "Firehouse Subs"]
+    fast_chicken_chains = ["KFC", "Chick fil A",
+                           "Popeyes", "Wingstop", "Churchs Chicken"]
+    fastchicken = fast_chicken_chains
+    fastfood = fast_food_chains
+    else_statement = "Sorry, I can't help you!"
+    if user_response in fast_food_chains:
+        return "You should try " + choice(fastchicken) + " then."
+    elif user_response in fast_chicken_chains:
+        return "Maybe try " + choice(fastfood) + " sometime?"
+    else:
+        return else_statement
+user_response = input("Hello, I am a ChatBot that can suggest fast food restaurants to you! \nWhat is the most recent fast food restaurant you have visited? ")
+bot_suggestion = get_bot_response(user_response)
+print(bot_suggestion)
